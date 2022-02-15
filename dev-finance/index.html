@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dev-Finance</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container-center">
+
+        <section class="input-products">
+            <div class="alert"> <p></p> </div>
+
+            <form class="form">
+
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" placeholder="product's name">
+    
+                <label for="value">Value</label>
+                <input type="number" name="number" id="value" placeholder="R$ 0,00">
+    
+                <label for="data">Data</label>
+                <input type="date" name="data" id="data">
+    
+                <button type="submit" class="submit">Submit</button>
+
+            </form>
+        </section>
+
+        <section class="values-products">
+            <table>
+                <thead class="">
+                    <tr>
+                        <th>Name</th>
+                        <th>value</th>
+                        <th>data</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody">
+
+                </tbody>
+            </table>
+            <p class="clear-items">Clear Items</p>
+        </section>
+
+        <section class="results">
+            <div class="incomes">
+                <p>Incomes: <span class="span-incomes"></span></p>
+            </div>
+
+            <div class="expenses">
+                <p>expenses: <span class="span-expenses"></span></p>
+            </div>
+
+            <div class="result">
+                <p>result: <span class="span-result"></span></p>
+            </div>
+
+        </section>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

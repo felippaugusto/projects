@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bloco de notas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="section-center">
+
+        <!-- alerta vai aparecer ,adicionar os textos-->
+        <div class="add-text">
+            <p class="alert"></p>
+            <form class="form-texts">
+                <label for="title">
+                    <span>ADD TITLE</span>
+                </label>
+                <input type="text" id="title" name="title" class="title focus-inputs hover-inputs">
+
+                <label for="text" class="label-text">ADD TEXT</label>
+                <textarea id="text" name="text" class="focus-inputs hover-inputs textarea" maxlength="400">
+                </textarea>
+
+                <button type="submit" class="button-submit">Submit
+                </button>
+            </form>
+        </div>
+
+        <!-- depois de escritos os textos, eles serão inseridos aqui, aqui irá aparecer o título dele, o texto e os botões de enviar e editar-->
+        <div class="container-list">
+            <div class="text-list">
+
+            </div>
+            <button class="clear-items">
+               <p>Clear Items</p>
+            </button>
+        </div>
+    </section>
+
+    <div class="window-float">
+        <div class="modal">
+            <p id="text-modal"></p>
+
+            <div class="container-buttons-modal">
+                <button class="buttons-modal yes" onclick="clearItem()">Yes</button>
+                <button class="buttons-modal cancel" onclick="Modal.close()">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

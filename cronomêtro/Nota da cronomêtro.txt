@@ -1,0 +1,17 @@
+criei as variáveis
+
+A vairável interval é para poder usar o setInterval para poder setar um timer para rodar o código
+
+e o clearInterval para poder parar esse timer, assim para de executar nosso código
+
+após isso criei uma função que quando eu clicar no botão de start ele atribui ao interval a função de startTimer e atribui um timer de 10 milisegundos
+
+após isso ele atribui ao botão de Stop um clearinterval que é atribui a variável interval fazendo parar o timer, ou seja, ele limpa o intervalo
+
+após isso ele trabalha com o botão de resetar, quando clicar na função, ele vai limpar o intervalo tmb, vai adicionar a essa função a variável tens e a variável seconds que no escopo global foram atribuídas a elas uma string com dois zeros "00", após ter atribuído essas variáveis, ele vai atribuir elas ao appendtens e ao appendseconds que pegam as duas classes seconds e tens resetando o contador
+
+tens é os segundos
+
+após isso ele trabalha com o startTimer, o start timer vai adicionando +1 ao tens, ele coloca uma condicional também usando o if, se tens for menor ou igual a 9 ele vai adicionar ao appendTens 0 + tens ou seja 01, se tens for maior que 9 ele vai apenas adicionar tens, ou seja 11, se tens for menor que 99 ele vai adicionar seconds +1, e no seconds ele vai adicionar 0 mais seconds 01, dentro desse if ele tmb atribui tens = 0; e adiciona ao appenTens uma string "0" + 0
+
+o outro if se seconds for maior que 9 ele vai adicionar ao AppendSeconds + seconds

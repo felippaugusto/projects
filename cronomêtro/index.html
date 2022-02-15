@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cronometro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>STOPWATCH</h1>
+        <h1 class="second-h1">VANILLA JAVASCRIPT STOPWATCH</h1>
+        <p>
+            <span id="hours">00</span>
+            <span>:</span>
+            <span id="seconds">01</span>
+            <span>:</span>
+            <span id="tens">00</span>
+        </p>
+
+        <div class="container-buttons">
+            <button id="start">Start</button>
+            <button id="stop">Stop</button>
+            <button id="reset">Reset</button>
+            <button id="cronometro" onclick="Modal.open()">cronomêtro</button>
+        </div>
+
+        <div class="container-modal">
+            <div class="modal">
+                <div class="content">
+                    <p class="modal-format-p">O cronomêtro irá diminuir seu contador, vc realmente quer fazer isso?</p>
+
+                    <button id="close" onclick="Modal.close()">
+                        <p>Fechar</p>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-modal-finished">
+
+            <div class="modal-finished">
+                <div class="contend-finished">
+
+                <p class="modal-format-p">Seu cronomêtro chegou ao fim!</p>
+
+                    <button id="close-finished">
+                        <p>Fechar</p>
+                    </button>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,255 @@
+/* start inports */
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Roboto:wght@100;300;400;500;700&display=swap');
+/* end inports*/
+
+/* start roots*/
+:root {
+    --border-radius: 1rem;
+    --border: 1px solid black;
+    --width90: 90%;
+    --background-gray: #DCDCDC;
+}
+/* end roots*/
+
+/* start globals*/
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    transition: 0.3s;
+    outline: none;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: #696969;
+    max-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* end globals*/
+
+/* START CONTAINER*/
+.container-center {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: .8rem;
+    border-radius: var(--border-radius);
+}
+/* END CONTAINER */
+
+/* START PRODUCTS */
+.input-products {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: var(--width90);
+    border-radius: var(--border-radius);
+    background-color: var(--background-gray);
+}
+
+/* start alerts */
+.alert {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 0 0;
+    border-radius: var(--border-radius);
+    width: var(--width90);
+    height: 0;
+    font-size: 1.4rem;
+}
+
+.alert.danger{
+    color: #721c24;
+    background-color: #f8d7da;
+    height: 2.5rem;
+}
+
+.alert.successful {
+    color: #155724;
+    background-color: #00FF7F;
+    height: 2.5rem;
+}
+
+.alert.edit {
+    color: #8B4513;
+    background-color: #F0E68C;
+    height: 2.5rem;
+}
+/* end alerts*/
+
+/* form*/
+form {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    border-radius: var(--border-radius);
+    background-color: var(--background-gray);
+}
+
+/* start labels*/
+label {
+    font-size: 1.6rem;
+    margin-top: 1rem;
+    text-transform: uppercase;
+}
+/* end labels*/
+
+/* inputs */
+input {
+    border-radius: var(--border-radius);
+    height: 3rem;
+    padding: 1rem 1rem;
+    width: 50rem;
+    margin: 0 2.5rem 0 2.5rem;
+    outline: 1px solid black;
+}
+
+button {
+    margin: 1rem 0 1rem 0;
+    padding: 0.6rem 1.4rem;
+    border-radius: var(--border-radius);
+    border: 1px solid black;
+    cursor: pointer;
+    background-color: #4F4F4F;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+button:hover {
+    padding: 0.8rem 1.6rem;
+    background-color: #808080;
+    color: #DCDCDC;
+}
+
+/* END PRODUCTS */
+
+/* START VALUES */
+.values-products {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: var(--width90);
+    border-radius: var(--border-radius);
+    background-color: var(--background-gray);
+}
+
+table {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.thead {
+    margin-bottom: 1rem;
+}
+
+tr th, tr td {
+    height: 2rem;
+    width: 20rem;
+}
+
+tr th {
+    font-size: 1.6rem;
+}
+
+tr td {
+    font-size: 1.4rem;
+}
+
+/* END VALUES*/
+
+/* START RESULTS*/
+.results {
+    display: flex;
+    width: var(--width90);
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    border-radius: var(--border-radius);
+    background-color: var(--background-gray);
+}
+
+.incomes, .expenses, .result{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 1rem;
+    width: 98%;
+    border-bottom: 1px solid #363636;
+    font-size: 1.4rem;
+}
+
+.results div:last-child{
+    margin-bottom: 1rem;
+}
+
+.clear-items {
+    font-size: 1.6rem;
+    color: #FF6347;
+    cursor: pointer;
+}
+
+.clear-items:hover {
+    color: #FF0000;
+}
+
+/* start buttons clear and edit*/
+.edit, .clear {
+    width: 8rem;
+}
+
+.edit {
+    background-color: #008000;
+    color: #00FF00;
+}
+
+.clear {
+    background-color: #B22222;
+    color: #fff;
+    margin-left: 0.5rem;
+}
+
+.edit:hover {
+    background-color: #32CD32;
+    color: #006400;
+    border: none;
+}
+
+.clear:hover {
+    background-color: #DC143C;
+    border: none;
+}
+/* end buttons clear and edit*/
+
+/* END RESULTS */
+
+/* medias*/
+@media(max-width: 650px) {
+    .input-products, .values-products, .results {
+        width: 70%;
+    }
+    input {
+        width: 90%;
+    }
+    .edit, .clear {
+        width: 6rem;
+        font-size: 1.0rem;
+    }
+}

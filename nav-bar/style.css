@@ -1,0 +1,124 @@
+* {margin: 0;}
+* {padding: 0;}
+
+header {
+    box-sizing: border-box;
+    background-color: #e7e7e7;
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#menu {
+    display: flex;
+    list-style: none;
+    gap: .5rem;
+}
+
+/* aqui eles receberam display block para que quando for a tela pequena e eles ficam em uma linha cada um podendo receber propriedades*/
+#menu a, #logo {
+    display: block;
+    padding: .5rem;
+    border-radius: .2rem;
+    text-decoration: none;
+    font-family: sans-serif;
+    transition: 0.4s linear all;
+    color: black;
+}  
+
+#menu a:hover {
+    margin-left: 1rem;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+main {
+    background-image: url("IMAGE/image.jpg");
+    height: 80vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+/* aqui o display none para quando a tela for maior que 800px, ele não deixa aparecendo o menu hamburguer*/
+#btn-mobile{
+    display: none;
+    padding: 0.3rem;
+    cursor: pointer;
+}
+
+@media(max-width: 800px){
+    #menu {
+        display: block; 
+        position: absolute;
+        width: 100%;
+        top: 20vh;
+        right: 0;
+        height: 0vh;
+        transition: .6s;
+        background-color: #e7e7e7;
+        z-index: 1000;
+        visibility: hidden;
+        overflow-y: hidden;
+        /* o overflow hidden é para os elementos serem cortados juntos com o menu quando ele desaparecer com a barra de rolagem*/
+    }
+    #nav.active #menu {
+        /* aqui como o menu estava none, se eu clicar no botão de menu ele irá coloca a classe active por meio do js*/
+        height: calc(100vh - 20vh);
+        visibility: visible;
+        overflow-y: auto;
+    }
+    #menu a {
+        padding: 1rem 0rem;
+        margin: 0 1rem;
+        border-bottom: 2px solid rgba(0, 0, 0, .05);
+    }
+    #btn-mobile {
+        display: flex;
+        padding: .5rem 1rem;
+        font-size: 1rem;
+        border: none;
+        background: none;
+        cursor: pointer;
+    }
+
+    /* esse hamburguer é a primeira barra do menu hamburguer*/
+    #hamburguer {
+        display: block;
+        width: 20px;
+        border-top: 2px solid;
+    }
+
+    /* aqui ele está fazendo as outras duas barras do hamburguer*/
+    #hamburguer::after, #hamburguer::before{
+        width: 20px;
+        height: 2px;
+        background: currentColor; /* ele pega a cor do elemento e joga para os outros*/
+        content: "";
+        /* sem o content, ele não adiciona o after e o before*/
+        display: block;
+        /* tem que especificar ao elemento qual display ele é, pois todos os elementos html possuem um display por default*/
+        margin-top: 5px;
+        transition: .6s;
+        position: relative;
+        /* a posição relativa é usado o top e o bottom e esses dois valores são alterados em relação ao elemento que é denominado static, ou seja, a primeira barra*/
+    }
+    #nav.active #hamburguer {
+        border-top: transparent;
+    }
+    /* quando for clicado no hamburguer a barra de cima fica transparente, dando a impressão que virou um X*/
+
+    #nav.active #hamburguer::before {
+        transform: rotate(135deg);
+    }
+    #nav.active #hamburguer::after {
+        transform: rotate(-135deg);
+        top: -7px;
+        /* Ele está subindo um pouco a barra para que fique certinho um X*/
+    }
+}

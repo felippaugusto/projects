@@ -1,0 +1,16 @@
+--- section center
+
+- name input
+
+- value input
+
+- submit
+
+--- section results
+
+- name product
+                 - fazer utilizando tabela
+- value product
+
+- sum of products
+
