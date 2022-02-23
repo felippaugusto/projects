@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APLICATION-FINANCE</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="aplication-container">
+        <h1>Controle de despesas</h1>
+
+        <div class="container-current-balance">
+            <p class="format-current-balance-p format-p">Saldo Atual</p>
+            <span class="current-balance">R$ 0.00</span>
+        </div>
+
+        <div class="container-incomes-and-expenses">
+            <div class="container-incomes">
+                <p class="format-p incomes">RECEITAS</p>
+                <span id="incomes-span">R$ 0.00</span>
+            </div>
+            <div class="container-expenses">
+                <p class="format-p expenses">DESPESAS</p>
+                <span id="expenses-span">R$ 0.00</span>
+            </div>
+        </div>
+
+        <p class="format-p transection-p">transações</p>
+        <hr>
+
+        <table>
+            <thead class="thead">
+                <tr>
+                    <th>Name</th>
+                    <th>Value</th>
+                </tr>
+            </thead>
+            <tbody id="add-transections">
+            </tbody>
+            <tfoot>
+                <tr class="clear-items-tr">
+                    <td colspan="3" class="clear-items">clear Items</td>
+                </tr>
+            </tfoot>
+        </table>
+
+        <div class="container-modal">
+            <div class="modal">
+                <p> <span class="text-modal">Você tem certeza que deseja excluir todos os itens? sua conta será zerada!</span> </p>
+                <div class="container-buttons-modal">
+                    <button class="button-clear-items-modal">Excluir tudo</button>
+                    <button class="button-cancel-modal">cancel</button>
+                </div>
+            </div>
+        </div>
+
+        <p class="add-transections format-p">Adicionar transações +</p>
+        <hr class="hr-transection">
+
+        <form id="form">
+            <label for="name">Nome</label>
+            <input type="text" name="nome" id="name" placeholder="Nome da transação" required title="Por favor, preencha com seu nome">
+
+            <label for="value">Valor</label>
+            <p id="form-p">(negativo - despesas, positivo - receitas)</p>
+            <input type="text" name="value" id="value" placeholder="Valor da transação" required title="Por favor, preencha este campo com o valor da sua transação">
+
+            <button type="submit" class="button-submit">Adicionar</button>
+        </form>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
